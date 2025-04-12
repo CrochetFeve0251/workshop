@@ -5,6 +5,12 @@
     "scripts": {
         "test-integration": "\"vendor/bin/phpunit\" -c tests/Integration/phpunit.xml.dist"
     },
+    "autoload": {
+        "psr-4": {
+            "Workshop\\": "inc/"
+        }
+
+    },
     "autoload-dev": {
         "psr-4": {
             "Workshop\\Tests\\": "tests/"
