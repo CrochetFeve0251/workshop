@@ -13,4 +13,5 @@ $kernel = new Kernel(new EventManager());
 
 $kernel->boot([
     Subscriber::class,
+    \Workshop\SitemapExists\Subscriber::class,
 ]);
