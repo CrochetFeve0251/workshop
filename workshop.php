@@ -14,3 +14,15 @@ function sitemap_add_redirect_rule() {
 }
 
 add_action('init', 'sitemap_add_redirect_rule');
+
+function sitemap_change_url_sitemap($url, $path) {
+    $sitemap = get_option('sitemap_sitemap_url', '');
+
+    if('/wp-sitemap.xml' !== $path || ! $sitemap ) {
+        return $url;
+    }
+
+    return str_replace('/wp-sitemap.xml', '/' . $sitemap, $url);
+}
+
+add_filter('home_url', 'sitemap_change_url_sitemap', 10, 2);
