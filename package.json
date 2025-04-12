@@ -1,0 +1,17 @@
+{
+  "name": "workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "wp-env:start": "wp-env start",
+    "wp-env:stop": "wp-env stop",
+    "wp-env:destroy": "wp-env destroy",
+    "composer": "wp-env run cli --env-cwd=wp-content/plugins/workshop composer",
+    "integration": "wp-env run cli --env-cwd=wp-content/plugins/workshop composer run test-integration"
+  },
+  "private": true,
+  "dependencies": {
+    "@wordpress/env": "^10.21.0"
+  }
+}

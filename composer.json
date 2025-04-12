@@ -1,0 +1,14 @@
+{
+    "require-dev": {
+        "wp-media/phpunit": "^3.0"
+    },
+    "scripts": {
+        "test-integration": "\"vendor/bin/phpunit\" -c tests/Integration/phpunit.xml.dist"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Workshop\\Tests\\": "tests/"
+        }
+
+    }
+}
